@@ -550,15 +550,16 @@
     const SUPABASE_ANON_KEY = 'sb_publishable_3YTRo7nrUk60zOBSXdKfVw_XuAx-scv';
     const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-    window.addEventListener('load', function() {
-        const loader = document.getElementById('page-loader');
-        if (loader) {
-            loader.style.opacity = '0';
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 500); // Matches the 0.5s transition time
-        }
-    });
+   // TO THIS:
+document.addEventListener('DOMContentLoaded', function() {
+    const loader = document.getElementById('page-loader');
+    if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    }
+});
 
     let orderShoppingCart = [];
 
