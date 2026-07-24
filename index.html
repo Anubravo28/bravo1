@@ -55,8 +55,8 @@
             z-index: 1000;
             display: flex;
             flex-direction: column;
-            align-items: left;
-            justify-content: left;
+            align-items: flex-start;
+            justify-content: flex-start;
         }
 
         header h1 { 
@@ -150,8 +150,8 @@
             left: 5px; 
             padding: 1px; 
             display: flex;
-            align-items: left;
-            justify-content: left;
+            align-items: flex-start;
+            justify-content: flex-start;
             width: 35px;
         }
         .menu-toggle-btn:hover { color: var(--primary); }
@@ -675,7 +675,7 @@
             e.preventDefault(); 
             
             const itemName = this.querySelector('input[name="item"]').value;
-            const itemPrice = parseInt(this.querySelector('input[name="price"]').value);
+            const itemPrice = parseInt(this.querySelector('input[name="price"]').value, 10);
             const initialNote = this.querySelector('.note-input').value;
             
             const existingItem = orderShoppingCart.find(cartItem => cartItem.name === itemName);
